@@ -1,0 +1,105 @@
+body {
+  background-image: url("http://freshwallpapers.info/uploads/posts/2016-03/2_poker.jpg");
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  display:flex;
+  justify-content: center;
+
+}
+h1{
+  position:relative;
+  color: white;
+  font-weight:bolder;
+  text-align: center;
+}
+.background_image{
+
+}
+.slot_machine{
+  margin-top: 10%;
+  display:flex;
+  border: 1px dotted white;
+  width: 850px;
+  height: 400px;
+  justify-content: center;
+
+}
+
+
+.controls{
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40px;
+}
+.button {
+  width: 200px;
+  height: 30px;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+.bank_roll {
+  background-color: white;
+  width: 200px;
+  height: 30px;
+  border: 1px solid lightgreen;
+  margin-top:10px;
+  margin-bottom: 80px;
+}
+.bank_roll_label{
+  background: white;
+  color: black;
+  font-family: helvetica;
+
+}
+
+/*SLOT SECTION BEGIN*/
+
+.slot_container{
+  display: flex;
+  border: 3px solid pink;
+  width: 600px;
+
+  flex-direction:column;
+}
+.slots{
+
+  display: flex;
+  border: 1px solid pink;
+  width: 600px;
+  justify-content: space-around;
+}
+.slot_reel{
+  
+}
+.slot{
+  background-color:white;
+  width: 180px;
+  height: 180px;
+  border: 2px solid black;
+  margin: 5px;
+
+}
+/*.slot1{
+
+background-image: url("/Users/filkckm/Ironhack_April/week2/day5/project1_slot_machine/images/png_files/cherries.png");
+background-position: center;
+background-repeat:no-repeat;
+background-size: 80% ;
+}
+.slot2{
+  background-image: url("/Users/filkckm/Ironhack_April/week2/day5/project1_slot_machine/images/png_files/chili.png");
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: 80% ;
+
+}
+.slot3{
+  background-image: url("/Users/filkckm/Ironhack_April/week2/day5/project1_slot_machine/images/png_files/seven.png");
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: 80% ;*/
+
+}

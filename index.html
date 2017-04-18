@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Slot Machine</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/main.css"/>
+  <script type="text/javascript" src ="js/main.js"></script>
+</head>
+
+<body>
+
+  <div class="background_image">
+    <div class ="slot_machine">
+
+       <div class="slot_container">
+         <h1>Slot Machine</h1>
+             <div class="slots">
+                 <div class="slot_reel slot1_container" id="slot1">
+                   <img class ="slot" src ="png_files/seven.png" id="image-slot1" name="slot1">
+                 </div>
+                 <div class="slot_reel slot2_container" id="slot2">
+                   <img class ="slot" src ="png_files/seven.png" id="image-slot2" name="slot2">
+                 </div>
+                 <div class="slot_reel slot3_container" id="slot3">
+                   <img class ="slot" src ="png_files/seven.png" id="image-slot3" name="slot3">
+                 </div>
+             </div>
+      </div>
+       <div class="controls">
+
+         <div class="bank_roll"> <label for="bank roll" class="label">Bank roll: </label> <span class="current_bank_roll"> </span></div>
+         <div class="Bet"><label class="label" for="Bet amount ">Bet: </label> <span class="bet_amount " > </span></div>
+         <button type="button" name="start-button" class="button start_button" id="start_button">Start</button>
+         <!-- <button type="button" name="risk_ladder" class="button risk1_button">Risk Ladder</button>
+         <button type="button" name="double_it" class="button risk2_button">Double It!</button> -->
+
+       </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
