@@ -157,70 +157,70 @@ $("#start_button").on("click", function(){
 
                 winAmount=0;
                 break;
-            }
-//  if no triple is hit: check pairs
-          } else {
-                  if (lastImage1 ==="png_files/chili.png" && lastImage2 ==="png_files/chili.png" )
-                    {
-                      winAmount += (betAmount*2);
-                      console.log("You won:" +winAmount);
-                      winAmount = parseFloat(winAmount).toFixed(2);
-                      $(".win_amount_label").text("$" + winAmount);
-                      bankRoll = (bankRoll +  winAmount);
-                      console.log("Your new bank roll: " + bankRoll);
-                      winAmount=0;
-                    }
-                  if (lastImage1 ==="png_files/chili.png" && lastImage3 ==="png_files/chili.png" )
-                    {
-                      winAmount += (betAmount*2);
-                      console.log("You won:" +winAmount);
-                      winAmount = parseFloat(winAmount).toFixed(2);
-                      $(".win_amount_label").text("$" + winAmount);
-                      bankRoll = (bankRoll +  winAmount);
-                      console.log("Your new bank roll: " + bankRoll);
-                      winAmount=0;
-                    }
-                  if (lastImage2 ==="png_files/chili.png" && lastImage3 ==="png_files/chili.png" )
-                    {
-                      winAmount += (betAmount*2);
-                      console.log("You won:" +winAmount);
-                      winAmount = parseFloat(winAmount).toFixed(2);
-                      $(".win_amount_label").text("$" + winAmount);
-                      bankRoll +=  winAmount;
-                      console.log("Your new bank roll: " + bankRoll);
-                      winAmount=0;
-                    }
-                  if (lastImage1 ==="png_files/cherries.png" && lastImage2 ==="png_files/cherries.png" )
-                    {
-                      winAmount += (betAmount*2);
-                      console.log("You won:" +winAmount);
-                      winAmount = parseFloat(winAmount).toFixed(2);
-                      $(".win_amount_label").text("$" + winAmount);
-                      bankRoll +=  winAmount;
-                      console.log("Your new bank roll: " + bankRoll);
-                      winAmount=0;
-                    }
-                  if (lastImage1 ==="png_files/cherries.png" && lastImage3 ==="png_files/cherries.png" )
-                    {
-                      winAmount += (betAmount*2);
-                      console.log("You won:" +winAmount);
-                      winAmount = parseFloat(winAmount).toFixed(2);
-                      $(".win_amount_label").text("$" + winAmount);
-                      bankRoll +=  winAmount;
-                      console.log("Your new bank roll: " + bankRoll);
-                      winAmount=0;
-                    }
-                  if (lastImage2 ==="png_files/cherries.png" && lastImage3 ==="png_files/cherries.png" )
-                    {
-                      winAmount += (betAmount*2);
-                      console.log("You won:" +winAmount);
-                      winAmount = parseFloat(winAmount).toFixed(2);
-                      $(".win_amount_label").text("$" + winAmount);
-                      bankRoll +=  winAmount;
-                      console.log("Your new bank roll: " + bankRoll);
-                      winAmount=0;
-                    }
+
               }
+          //  } else {
+          //         if (lastImage1 ==="png_files/chili.png" && lastImage2 ==="png_files/chili.png" )
+          //           {
+          //             winAmount += (betAmount*2);
+          //             console.log("You won:" +winAmount);
+          //             winAmount = parseFloat(winAmount).toFixed(2);
+          //             $(".win_amount_label").text("$" + winAmount);
+          //             bankRoll = (bankRoll +  winAmount);
+          //             console.log("Your new bank roll: " + bankRoll);
+          //             winAmount=0;
+          //           }
+          //         if (lastImage1 ==="png_files/chili.png" && lastImage3 ==="png_files/chili.png" )
+          //           {
+          //             winAmount += (betAmount*2);
+          //             console.log("You won:" +winAmount);
+          //             winAmount = parseFloat(winAmount).toFixed(2);
+          //             $(".win_amount_label").text("$" + winAmount);
+          //             bankRoll = (bankRoll +  winAmount);
+          //             console.log("Your new bank roll: " + bankRoll);
+          //             winAmount=0;
+          //           }
+          //         if (lastImage2 ==="png_files/chili.png" && lastImage3 ==="png_files/chili.png" )
+          //           {
+          //             winAmount += (betAmount*2);
+          //             console.log("You won:" +winAmount);
+          //             winAmount = parseFloat(winAmount).toFixed(2);
+          //             $(".win_amount_label").text("$" + winAmount);
+          //             bankRoll +=  winAmount;
+          //             console.log("Your new bank roll: " + bankRoll);
+          //             winAmount=0;
+          //           }
+          //         if (lastImage1 ==="png_files/cherries.png" && lastImage2 ==="png_files/cherries.png" )
+          //           {
+          //             winAmount += (betAmount*2);
+          //             console.log("You won:" +winAmount);
+          //             winAmount = parseFloat(winAmount).toFixed(2);
+          //             $(".win_amount_label").text("$" + winAmount);
+          //             bankRoll +=  winAmount;
+          //             console.log("Your new bank roll: " + bankRoll);
+          //             winAmount=0;
+          //           }
+          //         if (lastImage1 ==="png_files/cherries.png" && lastImage3 ==="png_files/cherries.png" )
+          //           {
+          //             winAmount += (betAmount*2);
+          //             console.log("You won:" +winAmount);
+          //             winAmount = parseFloat(winAmount).toFixed(2);
+          //             $(".win_amount_label").text("$" + winAmount);
+          //             bankRoll +=  winAmount;
+          //             console.log("Your new bank roll: " + bankRoll);
+          //             winAmount=0;
+          //           }
+          //         if (lastImage2 ==="png_files/cherries.png" && lastImage3 ==="png_files/cherries.png" )
+          //           {
+          //             winAmount += (betAmount*2);
+          //             console.log("You won:" +winAmount);
+          //             winAmount = parseFloat(winAmount).toFixed(2);
+          //             $(".win_amount_label").text("$" + winAmount);
+          //             bankRoll +=  winAmount;
+          //             console.log("Your new bank roll: " + bankRoll);
+          //             winAmount=0;
+          //           }
+          }
         }
         bankRoll= parseFloat(bankRoll).toFixed(2);
         $(".current_bank_roll").text("$" + bankRoll); //show 2 decimals
@@ -230,7 +230,7 @@ $("#start_button").on("click", function(){
     }, 20);
 
 
-}else 
+}else
       { alert("Game Over");
       location.reload();}
       });
