@@ -17,9 +17,14 @@ var images= [
             "png_files/seven.png",
 ];
 
-var bankRoll = 5;
-var betAmount = 0.5;
+var bankRoll = 10.00;
+bankRoll= parseFloat(bankRoll).toFixed(2);
+// var betAmount = document.getElementById("bet_Amount").value;
+// console.log(betAmount);
+
+$(".current_bank_roll").text("$" + bankRoll);
 var winAmount = 0;
+
 
 var slot1Final = "";
 var slot2Final = "";
@@ -32,16 +37,19 @@ var last_element3 =null;
 var resultArray =[];
 
 $("#start_button").on("click", function(){
+
+  var betAmount = document.getElementById("bet_Amount").value;
+
   if (bankRoll>0){
+
+
     //make the interval run for a certain number of times, i.e. 50 and stop aftewards
     var timesRun = 0;
     var interval = setInterval(function(){
         timesRun += 1;
-        if(timesRun === 30){
+        if(timesRun === 60){
             clearInterval(interval);
-
         }
-
         //create 3 different numbers. one for each slot.
         var randomNr  = Math.floor(Math.random()* images.length);
         var randomNr2 = Math.floor(Math.random()* images.length);
@@ -69,11 +77,11 @@ $("#start_button").on("click", function(){
 
         //this shows the final images after the reels spinned 50 times
         //RESULT
-        if(timesRun === 30){
+        if(timesRun === 60){
         //console.log(resultArray[resultArray.length -3],resultArray[resultArray.length -2],resultArray[resultArray.length -1 ]);
-        bankRoll -= betAmount.toFixed(2);
+        bankRoll -= betAmount;
 
-        console.log("Bank roll: " + bankRoll.toFixed(2));
+        console.log("Bank roll: " + bankRoll);
           var lastImage1 = resultArray[resultArray.length -3];
           var lastImage2 =resultArray[resultArray.length -2];
           var lastImage3= resultArray[resultArray.length -1];
@@ -92,72 +100,138 @@ $("#start_button").on("click", function(){
               case "png_files/chili.png": //all three show CHILI: win 3 x Bet
                 winAmount = betAmount*3;
                 console.log("You won:" +winAmount);
-                bankRoll = (bankRoll +  winAmount).toFixed(2);
+                bankRoll = (bankRoll +  winAmount);
+                winAmount = parseFloat(winAmount).toFixed(2);
+                $(".win_amount_label").text("$" + winAmount);
                 console.log("Your new bank roll: " + bankRoll);
+
                 winAmount=0;
                 break;
               case "png_files/cherries.png": //all three show CHERRIES: win 3 x Bet
                 winAmount = betAmount*3;
                 console.log("You won:" +winAmount);
-                bankRoll = (bankRoll +  winAmount).toFixed(2);
+                winAmount = parseFloat(winAmount).toFixed(2);
+                $(".win_amount_label").text("$" + winAmount);
+                bankRoll = (bankRoll +  winAmount);
                 console.log("Your new bank roll: " + bankRoll);
+
                 winAmount=0;
                 break;
               case "png_files/grapes.png": //all three show GRAPES: win 5 x Bet
                 winAmount = betAmount*10;
                 console.log("You won:" +winAmount);
-                bankRoll = (bankRoll +  winAmount).toFixed(2);
+                bankRoll = (bankRoll +  winAmount);
+                winAmount = parseFloat(winAmount).toFixed(2);
+                $(".win_amount_label").text("$" + winAmount);
                 console.log("Your new bank roll: " + bankRoll);
+
                 winAmount=0;
                 break;
               case "png_files/lemon.png": //all three show LEMON: win 5 x Bet
                 winAmount = betAmount*10;
                 console.log("You won:" +winAmount);
-                bankRoll = (bankRoll +  winAmount).toFixed(2);
+                bankRoll = (bankRoll +  winAmount);
+                winAmount = parseFloat(winAmount).toFixed(2);
+                $(".win_amount_label").text("$" + winAmount);
                 console.log("Your new bank roll: " + bankRoll);
+
                 winAmount=0;
                 break;
               case "png_files/diamond.png": //all three show DIAMOND: win 10 x Bet
                 winAmount = betAmount*50;
                 console.log("You won:" +winAmount);
-                bankRoll = (bankRoll +  winAmount).toFixed(2);
+                bankRoll = (bankRoll +  winAmount);
+                winAmount = parseFloat(winAmount).toFixed(2);
+                $(".win_amount_label").text("$" + winAmount);
                 console.log("Your new bank roll: " + bankRoll);
+
                 winAmount=0;
                 break;
               case "png_files/seven.png": //all three show seven: win 20 x Bet
-                winAmount = betAmount*100;
+                winAmount = (betAmount*100);
                 console.log("You won:" +winAmount);
-                bankRoll = (bankRoll +  winAmount).toFixed(2);
+                bankRoll = (bankRoll +  winAmount);
+                winAmount = parseFloat(winAmount).toFixed(2);
+                $(".win_amount_label").text("$" + winAmount);
                 console.log("Your new bank roll: " + bankRoll);
+
                 winAmount=0;
                 break;
             }
-                //if no triple is hit: check pairs
+//  if no triple is hit: check pairs
           } else {
-                  if (lastImage1 ==="png_files/chili.png" && lastImage2 ==="png_files/chili.png" || lastImage2 ==="png_files/chili.png" && lastImage3 ==="png_files/chili.png" || lastImage1 ==="png_files/chili.png" && lastImage3 ==="png_files/chili.png"  )
+                  if (lastImage1 ==="png_files/chili.png" && lastImage2 ==="png_files/chili.png" )
                     {
-                      winAmount += betAmount*2;
+                      winAmount += (betAmount*2);
                       console.log("You won:" +winAmount);
-                      bankRoll = (bankRoll +  winAmount).toFixed(2);
+                      winAmount = parseFloat(winAmount).toFixed(2);
+                      $(".win_amount_label").text("$" + winAmount);
+                      bankRoll = (bankRoll +  winAmount);
                       console.log("Your new bank roll: " + bankRoll);
                       winAmount=0;
                     }
-                  if (lastImage1 ==="png_files/cherries.png" && lastImage2 ==="png_files/cherries.png" || lastImage2 ==="png_files/cherries.png" && lastImage3 ==="png_files/cherries.png" || lastImage1 ==="png_files/cherries.png" && lastImage3 ==="png_files/cherries.png"  )
+                  if (lastImage1 ==="png_files/chili.png" && lastImage3 ==="png_files/chili.png" )
                     {
-                      winAmount += betAmount;
-                      console.log("You won:" +winAmount*2);
-                      bankRoll = (bankRoll +  winAmount).toFixed(2);
+                      winAmount += (betAmount*2);
+                      console.log("You won:" +winAmount);
+                      winAmount = parseFloat(winAmount).toFixed(2);
+                      $(".win_amount_label").text("$" + winAmount);
+                      bankRoll = (bankRoll +  winAmount);
+                      console.log("Your new bank roll: " + bankRoll);
+                      winAmount=0;
+                    }
+                  if (lastImage2 ==="png_files/chili.png" && lastImage3 ==="png_files/chili.png" )
+                    {
+                      winAmount += (betAmount*2);
+                      console.log("You won:" +winAmount);
+                      winAmount = parseFloat(winAmount).toFixed(2);
+                      $(".win_amount_label").text("$" + winAmount);
+                      bankRoll +=  winAmount;
+                      console.log("Your new bank roll: " + bankRoll);
+                      winAmount=0;
+                    }
+                  if (lastImage1 ==="png_files/cherries.png" && lastImage2 ==="png_files/cherries.png" )
+                    {
+                      winAmount += (betAmount*2);
+                      console.log("You won:" +winAmount);
+                      winAmount = parseFloat(winAmount).toFixed(2);
+                      $(".win_amount_label").text("$" + winAmount);
+                      bankRoll +=  winAmount;
+                      console.log("Your new bank roll: " + bankRoll);
+                      winAmount=0;
+                    }
+                  if (lastImage1 ==="png_files/cherries.png" && lastImage3 ==="png_files/cherries.png" )
+                    {
+                      winAmount += (betAmount*2);
+                      console.log("You won:" +winAmount);
+                      winAmount = parseFloat(winAmount).toFixed(2);
+                      $(".win_amount_label").text("$" + winAmount);
+                      bankRoll +=  winAmount;
+                      console.log("Your new bank roll: " + bankRoll);
+                      winAmount=0;
+                    }
+                  if (lastImage2 ==="png_files/cherries.png" && lastImage3 ==="png_files/cherries.png" )
+                    {
+                      winAmount += (betAmount*2);
+                      console.log("You won:" +winAmount);
+                      winAmount = parseFloat(winAmount).toFixed(2);
+                      $(".win_amount_label").text("$" + winAmount);
+                      bankRoll +=  winAmount;
                       console.log("Your new bank roll: " + bankRoll);
                       winAmount=0;
                     }
               }
         }
+        bankRoll= parseFloat(bankRoll).toFixed(2);
+        $(".current_bank_roll").text("$" + bankRoll); //show 2 decimals
         //speed of the iteration
+
         //first reel spins faster than the middle and the middle faster than the last
-    }, 1000);
+    }, 20);
 
 
-}else { alert("Game Over loser");
+}else 
+      { alert("Game Over");
       location.reload();}
       });
 
