@@ -17,7 +17,7 @@ body {
 }
 
 .slots777{
-margin-top:80px;
+margin-top:10%;
 width: 500px;
 height: auto;
 position: relative;
@@ -43,28 +43,46 @@ margin-bottom: 30px;
   flex-direction: column;
   align-items: center;
   margin-left: 30px;
-  margin-top:30px;
-  height: 160px;
+  margin-top:5px;
+  height: 200px;
 
 }
 .button {
+  background-color: #42b53d;
   font-family: impact;
   width: 150px;
-  height: 30px;
+  height: 40px;
+  font-size: 24px;
+  margin-top: px;
+}
+input{
+  width:80px;
 
 }
-.display_control {
+.display_control_cash {
+  padding: 2px;
   background-color: white;
-  width: 150px;
-  height: 30px;
+  width: 140px;
+  height: 40px;
+  font-size: 19px;
   /*border: 1px solid lightgreen;*/
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: px;
+  margin-bottom: px;
+}
+.display_control {
+  padding: 2px;
+  background-color: white;
+  width: 140px;
+  height: 30px;
+  font-size: 19px;
+  /*border: 1px solid lightgreen;*/
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .bank_roll_label{
   background: white;
   color: black;
-  font-family: helvetica;
+  font-family: impact;
 
 }
 select{
@@ -105,7 +123,7 @@ select{
   width: 103px;
   height: 123px;
   /*border: 2px solid white;*/
-  margin: 9px;
+  margin: 11px;
   margin-top: 37px;
 }
 /*.slot1{
