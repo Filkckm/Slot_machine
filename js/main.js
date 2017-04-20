@@ -34,7 +34,7 @@ bankRoll= parseFloat(bankRoll).toFixed(2);
 // var betAmount = document.getElementById("bet_Amount").value;
 // console.log(betAmount);
 
-$(".current_bank_roll").text("$" + bankRoll);
+$(".current_bank_roll").text("€" + bankRoll);
 var winAmount = 0;
 
 
@@ -117,7 +117,7 @@ $("#start_button").on("click", function(){
                 // console.log("You won:" +winAmount);
                 bankRoll = (bankRoll +  winAmount);
                 winAmount = parseFloat(winAmount).toFixed(2);
-                $(".win_amount_label").text("$" + winAmount);
+                $(".win_amount_label").text("€" + winAmount);
                 // console.log("Your new bank roll: " + bankRoll);
 
                 winAmount=0;
@@ -127,7 +127,7 @@ $("#start_button").on("click", function(){
                 // console.log("You won:" +winAmount);
                 bankRoll = (bankRoll +  winAmount);
                 winAmount = parseFloat(winAmount).toFixed(2);
-                $(".win_amount_label").text("$" + winAmount);
+                $(".win_amount_label").text("€" + winAmount);
 
                 // console.log("Your new bank roll: " + bankRoll);
 
@@ -138,7 +138,7 @@ $("#start_button").on("click", function(){
                 // console.log("You won:" +winAmount);
                 bankRoll = (bankRoll +  winAmount);
                 winAmount = parseFloat(winAmount).toFixed(2);
-                $(".win_amount_label").text("$" + winAmount);
+                $(".win_amount_label").text("€" + winAmount);
                 // console.log("Your new bank roll: " + bankRoll);
 
                 winAmount=0;
@@ -148,7 +148,7 @@ $("#start_button").on("click", function(){
                 // console.log("You won:" +winAmount);
                 bankRoll = (bankRoll +  winAmount);
                 winAmount = parseFloat(winAmount).toFixed(2);
-                $(".win_amount_label").text("$" + winAmount);
+                $(".win_amount_label").text("€" + winAmount);
                 // console.log("Your new bank roll: " + bankRoll);
 
                 winAmount=0;
@@ -158,7 +158,7 @@ $("#start_button").on("click", function(){
                 // console.log("You won:" +winAmount);
                 bankRoll = (bankRoll +  winAmount);
                 winAmount = parseFloat(winAmount).toFixed(2);
-                $(".win_amount_label").text("$" + winAmount);
+                $(".win_amount_label").text("€" + winAmount);
                 // console.log("Your new bank roll: " + bankRoll);
 
                 winAmount=0;
@@ -168,7 +168,7 @@ $("#start_button").on("click", function(){
                 // console.log("You won:" +winAmount);
                 bankRoll = (bankRoll +  winAmount);
                 winAmount = parseFloat(winAmount).toFixed(2);
-                $(".win_amount_label").text("$" + winAmount);
+                $(".win_amount_label").text("€" + winAmount);
                 // console.log("Your new bank roll: " + bankRoll);
 
                 winAmount=0;
@@ -239,7 +239,7 @@ $("#start_button").on("click", function(){
           }
         }
         bankRoll= parseFloat(bankRoll).toFixed(2);
-        $(".current_bank_roll").text("$" + bankRoll); //show 2 decimals
+        $(".current_bank_roll").text("€" + bankRoll); //show 2 decimals
         //speed of the iteration
 
         //first reel spins faster than the middle and the middle faster than the last
