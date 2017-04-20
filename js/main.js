@@ -62,7 +62,7 @@ $("#start_button").on("click", function(){
     var timesRun = 0;
     var interval = setInterval(function(){
         timesRun += 1;
-        if(timesRun === 40){
+        if(timesRun === 80){
             clearInterval(interval);
         }
         //create 3 different numbers. one for each slot.
@@ -92,7 +92,7 @@ $("#start_button").on("click", function(){
 
         //this shows the final images after the reels spinned 50 times
         //RESULT
-        if(timesRun === 40){
+        if(timesRun === 80){
         //console.log(resultArray[resultArray.length -3],resultArray[resultArray.length -2],resultArray[resultArray.length -1 ]);
         bankRoll -= betAmount;
 
@@ -243,7 +243,7 @@ $("#start_button").on("click", function(){
         //speed of the iteration
 
         //first reel spins faster than the middle and the middle faster than the last
-    }, 40);
+    }, 20);
 
 
 }else
